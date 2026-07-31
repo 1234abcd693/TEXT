@@ -1,4 +1,4 @@
-package DAY1;
+package DAY1._1;
 
 public class Calculator {
 
