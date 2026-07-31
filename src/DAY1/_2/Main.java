@@ -13,8 +13,10 @@ public class Main {
         System.out.println(arrayutil.average(arr));
 
         System.out.println(arrayutil.contains(arr,7));
-
-
+        int[] newArr=arrayutil.reverse(arr);
+        for (int i=0;i<newArr.length;i++){
+            System.out.print(newArr[i]+" ");
+        }
 
     }
 

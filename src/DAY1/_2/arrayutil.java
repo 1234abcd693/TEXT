@@ -26,7 +26,13 @@ public class arrayutil {
             }
         }
         return false;
-
+    }
+    public static int[] reverse(int[] arr){
+        int[] newArr=new int[arr.length];
+        for(int i=arr.length-1;i>=0;i--){
+            newArr[arr.length-1-i]=arr[i];
+        }
+        return newArr;
     }
 
 }
