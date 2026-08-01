@@ -1,7 +1,5 @@
 package day2;
 
-import javax.lang.model.element.Name;
-
 public class Student {
     static int count;
     //属性
@@ -12,7 +10,7 @@ public class Student {
 
     //空参构造
     public Student(){
-        count++;
+        this(0,"未知",0,"未知");
     }
     //形参构造
     public Student(int id,String name,int age,String major){
