@@ -3,6 +3,8 @@ package day2;
 import javax.lang.model.element.Name;
 
 public class Student {
+    static int count;
+    //属性
     private int id;
     private String name;
     private int age;
@@ -10,6 +12,7 @@ public class Student {
 
     //空参构造
     public Student(){
+        count++;
     }
     //形参构造
     public Student(int id,String name,int age,String major){
@@ -17,6 +20,7 @@ public class Student {
         this.name=name;
         this.age=age;
         this.major=major;
+        count++;
     }
     //普通方法
     public void study(){
@@ -28,6 +32,7 @@ public class Student {
         System.out.println("年龄："+age);
         System.out.println("专业："+major);
     }
+
     //get方法
     public int getId(){
         return id;
@@ -40,6 +45,9 @@ public class Student {
     }
     public String getMajor(){
         return major;
+    }
+    public static int getCount(){
+        return count;
     }
     //set方法
     public void setId(int id){
