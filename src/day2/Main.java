@@ -16,5 +16,7 @@ public class Main {
         s2.setAge(-10);
 
         System.out.println(School.name);
+
+        System.out.println(Student.getCount());
     }
 }
