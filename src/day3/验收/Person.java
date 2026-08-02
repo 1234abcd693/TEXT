@@ -12,7 +12,10 @@ public abstract class Person {
         this.age=age;
     }
 
-    public abstract void showInfo();
+    public void showInfo(){
+        System.out.println("姓名："+name);
+        System.out.println("年龄："+age);
+    }
 
 
     public String getName(){
@@ -35,5 +38,5 @@ public abstract class Person {
 
 
     }
-    
+
 }
