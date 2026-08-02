@@ -5,5 +5,5 @@ public class Dog extends animals{
     public void eat(){
         System.out.println("狗在吃骨头");
     }
-    
+
 }
