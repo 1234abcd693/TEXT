@@ -15,7 +15,7 @@ public class Teacher extends Person{
         super.showInfo();
         System.out.println("科目："+subject);
     }
-    
+
     public String getSubject() {
         return subject;
     }
