@@ -22,6 +22,19 @@ public class Student {
         System.out.println("年龄："+age);
         System.out.println("专业："+major);
     }
+
+    public String getInfo(){
+        StringBuilder sb=new StringBuilder();
+        sb.append("编号：");
+        sb.append(id);
+        sb.append("姓名：");
+        sb.append(name);
+        sb.append("年龄：");
+        sb.append(age);
+        sb.append("专业：");
+        sb.append(major);
+        return sb.toString();
+    }
     //getter方法
     public int getId(){
         return id;
