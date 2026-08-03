@@ -1,20 +1,24 @@
 package Day4;
 
+import java.time.LocalDateTime;
+
 public class Student {
     private int id;
     private String name;
     private int age;
     private String major;
+    private LocalDateTime createTime=LocalDateTime.now();
     //无参构造方法
     public Student(){
-        this(0,"  ",0,"  ");
+        this(0,"  ",0,"  ",LocalDateTime.now());
     }
     //有参构造方法
-    public Student(int id, String name, int age, String major) {
+    public Student(int id, String name, int age, String major, LocalDateTime createTime) {
         this.id=id;
         this.name=name;
         this.age=age;
         this.major=major;
+        this.createTime=LocalDateTime.now();
     }
     public void ShowInfo(){
         System.out.println("学号："+id);
