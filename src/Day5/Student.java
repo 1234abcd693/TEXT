@@ -4,18 +4,18 @@ public class Student {
     private int id;
     private String name;
     private int age;
-    private String major;
+    private double score;
 
     // 无参构造方法
     public Student() {
-        this(0, "未知", 0, "未知");
+        this(0, "未知", 0, 0);
     }
     // 有参构造方法
-    public Student(int id, String name, int age, String major) {
+    public Student(int id, String name, int age, double score) {
         this.id = id;
         this.name = name;
         this.age = age;
-        this.major = major;
+        this.score = score;
     }
 
 
@@ -28,8 +28,8 @@ public class Student {
         sb.append(name);
         sb.append("年龄：");
         sb.append(age);
-        sb.append("专业：");
-        sb.append(major);
+        sb.append("成绩：");
+        sb.append(score);
         return sb.toString();
     }
     //getter方法
@@ -42,8 +42,8 @@ public class Student {
     public int getAge() {
         return age;
     }
-    public String getMajor() {
-        return major;
+    public double getScore() {
+        return score;
     }
 
     //setter方法
@@ -56,7 +56,7 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
-    public void setMajor(String major) {
-        this.major = major;
+    public void setScore(double score) {
+        this.score = score;
     }
 }
