@@ -13,12 +13,13 @@ public class StudentManager {
             System.out.println(student.getInfo());
         }
     }
-    public void Byid(int id){
+    public Student findById(int id){
         for(Student student:students){
             if(student.getId()==id){
-                System.out.println(student.getInfo());
+                return student;
             }
         }
+        return null;
     }
 
     public void deleteStudent(int id){
@@ -30,15 +31,15 @@ public class StudentManager {
         }
     }
 
-    public void getMaxScoreStudent(){
+    public Student getMaxScoreStudent(){
         double max=0;;
-        int maxid=0;
+        int maxIndex=0;
         for(Student student:students){
             if(student.getScore()>max){
                 max=student.getScore();
-                maxid=student.getId();
+                maxIndex=student.getId();
             }
         }
-        System.out.println(students.get(maxid).getInfo());
+        return findById(maxIndex);
     }
 }
