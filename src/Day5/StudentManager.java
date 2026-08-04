@@ -30,5 +30,15 @@ public class StudentManager {
         }
     }
 
-    public double getMaxScoreStudent()
+    public void getMaxScoreStudent(){
+        double max=0;;
+        int maxid=0;
+        for(Student student:students){
+            if(student.getScore()>max){
+                max=student.getScore();
+                maxid=student.getId();
+            }
+        }
+        System.out.println(students.get(maxid).getInfo());
+    }
 }
