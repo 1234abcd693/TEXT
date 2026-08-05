@@ -26,4 +26,8 @@ public class StudentManagerV2 {
             System.out.println(student.getInfo());
         }
     }
+
+    public int getCount(){
+        return map.size();
+    }
 }
