@@ -10,13 +10,34 @@ public class StudentManagerV3 {
     private HashMap<Integer,Student> map = new HashMap<>();
     public StudentManagerV3() {
         map = new HashMap<>();
+        load();
+    }
+
+
+    public void addStudent(Student s) {
+        map.put(s.getId(), s);
+        save();
+    }
+
+    public void deleteStudent(int id) {
+        map.remove(id);
+        save();
+    }
+
+    public Student findById(int id) {
+        return map.get(id);
+    }
+    public void showStudents() {
+        for(Student s:map.values()){
+            System.out.println(s.getInfo());
+        }
     }
 
     public void save() {
         try{
-            BufferedWriter bw = new BufferedWriter(new FileWriter("student.txt"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("Student.txt"));
             for(Student s:map.values()){
-                String data=s.getId()+","+s.getName()+","+s.getAge()+","+s.getScore()+"\n";
+                String data=s.getId()+","+s.getName()+","+s.getAge()+","+s.getScore();
                 bw.write(data);
                 bw.newLine();
             }
@@ -30,7 +51,7 @@ public class StudentManagerV3 {
 
     public void load(){
         try {
-            BufferedReader br = new BufferedReader(new FileReader("student.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("Student.txt"));
             String line;
             while ((line = br.readLine()) != null) {
                 String[] data=line.split(",");
